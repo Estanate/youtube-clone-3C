@@ -1,0 +1,48 @@
+:root{
+    --preto:#0F0F0F;
+    --branco:#F1F1F1;
+    --cinza:#AAAAAA;
+}
+
+
+@media(max-width:480px){
+    header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        background-color: var(--preto);
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-areas: 
+        "go-back    channel-name-header     channel-name-header     channel-name-header       cast-tv     search      options-header";
+    }
+
+    button{
+        background-color: transparent;
+        border: none;
+        color: var(--branco);
+    }
+
+    .go-back{
+        grid-area: go-back;
+    }
+
+    .channel-name-header{
+        grid-area: channel-name-header;
+        font-size: 1.2em;
+        color: var(--branco);
+    }
+
+    .cast-tv{
+        grid-area: cast-tv;
+    }
+
+    .search{
+        grid-area: search;
+    }
+
+    .options-header{
+        grid-area: options-header;
+    }
+}
