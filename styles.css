@@ -2,6 +2,16 @@
     --preto:#0F0F0F;
     --branco:#F1F1F1;
     --cinza:#AAAAAA;
+    font-family: sans-serif;
+}
+
+html{
+    height: 100vh;
+}
+
+*{
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -12,37 +22,190 @@
         align-items: center;
         justify-content: space-around;
         background-color: var(--preto);
+        padding: 10px 0px 10px 0px;
         display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        grid-template-areas: 
-        "go-back    channel-name-header     channel-name-header     channel-name-header       cast-tv     search      options-header";
+        grid-template-columns: repeat(9, 1fr);
     }
 
-    button{
+    .button-header{
         background-color: transparent;
         border: none;
         color: var(--branco);
     }
 
     .go-back{
-        grid-area: go-back;
+        grid-column: 1 / 2;
+        font-size: 1.4rem;
+        font-weight: lighter;
     }
 
     .channel-name-header{
-        grid-area: channel-name-header;
-        font-size: 1.2em;
+        grid-column: 2 / 6;
+        font-size: 1em;
         color: var(--branco);
     }
 
     .cast-tv{
-        grid-area: cast-tv;
+        grid-column: 7 / 8;
     }
 
     .search{
-        grid-area: search;
+        grid-column: 8 / 9;
     }
 
     .options-header{
-        grid-area: options-header;
+        grid-column: 9 / 10;
     }
+
+    .channel-container{
+        height: 50vh;
+        background-color: var(--preto);
+        display: grid;
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas: 
+        "channel-cover"
+        "channel-cover"
+        "channel-summary"
+        "channel-summary"
+        "channel-summary"
+        "subscribe"
+        "channel-nav";
+    }
+
+    .channel-cover{
+        grid-area:channel-cover;
+        width: 100vw;
+        height: 100%;
+    }
+
+    .channel-summary{
+        grid-area:channel-summary;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .channel-icon-main{
+        margin-top: 10px;
+        width: 4.5em;
+        border-radius: 50%;
+    }
+
+    .channel-name-main{
+        color: var(--branco);
+        font-size: 1.5rem;
+        padding-top: 5px;
+    }
+
+    .channel-description{
+        color: var(--cinza);
+        font-size: 0.7rem;
+        text-align: center;
+        padding: 10px 30px 0px 30px;
+    }
+
+    .subscribe{
+        grid-area:subscribe;
+        border: none;
+        border-radius: 50px;
+        height: 4vh;
+        margin: 10px 30px 0px 30px;
+        font-weight: bold;
+        color: var(--preto);
+    }
+
+    .channel-nav{
+        grid-area:channel-nav;
+        display: flex;
+        justify-content: space-around;
+        transition: 1s;
+    }
+
+    .buttons-channel-nav{
+    border: none;
+    background-color: transparent;
+    color: var(--cinza);
+    }
+
+    .home{
+        border-bottom:1px solid var(--branco);
+        color: var(--branco);
+    }
+
+    .video-box{
+        display: grid;
+        grid-template-rows: 1fr 0.2fr;
+        background-color: var(--preto);
+    }
+
+    .thumbnail-principal{
+        width: 100vw;
+    }
+
+    .video-info{
+        display: grid;
+        grid-template-columns: 1fr 8fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "channel-icon-video     video-title         video-options"
+        "channel-icon-video     video-statistics    video-statistics";
+    }
+
+    .channel-icon-video{
+        grid-area: channel-icon-video;
+        width: 2.4rem;
+        border-radius: 50%;
+        padding: 10px;
+    }
+        .video-title{
+        grid-area: video-title;
+        color: var(--branco);
+        font-weight: lighter;
+        font-size: 1rem;
+        padding: 10px 0px 0px 5px;
+    }
+        .video-statistics{
+        grid-area: video-statistics;
+        display: flex;
+        color: var(--cinza);
+        font-size: 0.6rem;
+        padding: 2px 0px 0px 5px;
+    }
+
+    .views{
+        padding-left: .5em;
+    }
+
+    .upload-time{
+        padding-left: .5em;
+    }
+
+    .video-options{
+        background-color: transparent;
+        border: none;
+        color: var(--branco);
+    }
+
+    .nav{
+        background-color: var(--preto);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height:max-content;
+        border-top: 10px var(--cinza);
+        padding: 10px 0px 10px 0px;
+        border-top: 0.1px solid var(--cinza);
+    }
+
+    .button-bottom-nav{
+        color: var(--branco);
+        border:none;
+        background-color: transparent;
+        font-size: 1.5rem;
+    }
+
+    .create{
+        font-size: 2rem;
+    }
+
 }

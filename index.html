@@ -9,35 +9,51 @@
 </head>
 <body>
     <header>
-        <button class="go-back"><i class="bi bi-chevron-left"></i></button>
-        <h2 class="channel-name-header">Channel Name</h2>
-        <button class="cast-tv"><i class="bi bi-cast"></i></button>
-        <button class="search"><i class="bi bi-search"></i></button>
-        <button class="options-header"><i class="bi bi-three-dots-vertical"></i></button>
+        <button class="go-back button-header"><i class="bi bi-chevron-left"></i></button>
+        <h2 class="channel-name-header button-header">Kaka - Mestre Pokémon!</h2>
+        <button class="cast-tv button-header"><i class="bi bi-cast"></i></button>
+        <button class="search button-header"><i class="bi bi-search"></i></button>
+        <button class="options-header button-header"><i class="bi bi-three-dots-vertical"></i></button>
     </header>
     <main>
-        <img src="imgs/channel-cover.jpg" alt="" class="channel-cover"></img>
-        <div class="channel-summary">
-            <div class="channel-id">
-                <img src="" alt="" class="channel-icon"></img>
-                <h1 class="channel-name-main"></h1>
-                <p class="channel-description"></p>
+        <div class="channel-container">
+            <img src="imgs/channel-cover.jpg" alt="Capa do canal" class="channel-cover"></img>
+            <div class="channel-summary">
+                <img src="/imgs/channel-icon.jpg" alt="ícone do canal" class="channel-icon-main"></img>
+                <h1 class="channel-name-main">Kaka - Mestre Pokémon!</h1>
+                <p class="channel-description">Eu gosto de Pokémon, acho que da pra perceber. Canal feito pra falar sobre Pokémon, fazer nerdologias, analise de personagem e reviews e retrospectivas dos jogos! roteiros, capas de vídeo e direção de video, todas feitas por João Marcello M. Gomes</p>
             </div>
-            <button class="subscribe"></button>
+            <button class="subscribe">Subscribe</button>
             <nav class="channel-nav">
-                <div class="home"></div>
-                <div class="videos"></div>
-                <div class="shorts"></div>
-                <div class="live"></div>
-                <div class="playlist"></div>
+                <button class="home buttons-channel-nav">HOME</button>
+                <button class="videos buttons-channel-nav">VIDEOS</button>
+                <button class="shorts buttons-channel-nav">SHORTS</button>
+                <button class="live buttons-channel-nav">LIVE</button>
+                <button class="playlist buttons-channel-nav">PLAYLISTS</button>
             </nav>
-            <div class="video-box">
-                <img src="" alt="" class="thumbnail">
-                <div class="video-info">
-
-                </div>
-            </div>
         </div>
+            <article class="video-box">
+                <img src="imgs/thumbnail-main.jpg" alt="thumbnail-principal" class="thumbnail-principal">
+                <div class="video-info">
+                    <img src="/imgs/channel-icon.jpg" alt="ícone do canal" class="channel-icon-video"></img>
+                    <h3 class="video-title">TUDO que você PRECISA SABER sobre Pokémon</h3>
+                    <button class="bi bi-three-dots-vertical video-options"></button>
+                    <div class="video-statistics">
+                        <div class="channel-name-video">Kaka - Mestre Pokémon! •</div>
+                        <div class="views">352K views •</div>
+                        <div class="upload-time">2 years ago</div>
+                    </div>
+                </div>
+            </article>        
     </main>
+    <footer>
+        <nav class="nav">
+                <button class="home button-bottom-nav"><i class="bi bi-house-door-fill"></i></button>
+                <button class="shorts button-bottom-nav"><i class="bi bi-file-play"></i></i></button>
+                <button class="create button-bottom-nav"><i class="bi bi-plus-circle"></i></button>
+                <button class="subscriptions button-bottom-nav"><i class="bi bi-collection-play"></i></button>
+                <button class="library button-bottom-nav"><i class="bi bi-collection"></i></button>
+            </nav>
+    </footer>
 </body>
 </html>
