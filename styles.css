@@ -15,6 +15,8 @@ html{
     padding: 0;
 }
 
+
+
     header{
         display: flex;
         flex-direction: row;
@@ -56,16 +58,12 @@ html{
         grid-column: 9 / 10;
     }
 
-    .channel-container{
+  .channel-container{
         height: 50vh;
         background-color: var(--preto);
         display: grid;
-        grid-template-rows: repeat(7, 1fr);
         grid-template-areas: 
         "channel-cover"
-        "channel-cover"
-        "channel-summary"
-        "channel-summary"
         "channel-summary"
         "subscribe"
         "channel-nav";
@@ -82,6 +80,7 @@ html{
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
     }
 
     .channel-icon-main{
@@ -104,20 +103,21 @@ html{
     }
 
     .subscribe{
+        width: 90%;
+        height: 4   0px;
         grid-area:subscribe;
         border: none;
         border-radius: 50px;
-        height: 4vh;
-        margin: 10px 30px 0px 30px;
         font-weight: bold;
         color: var(--preto);
+        margin-top:20px;
+        padding:5px;
     }
 
     .channel-nav{
         grid-area:channel-nav;
         display: flex;
         justify-content: space-around;
-        transition: 1s;
     }
 
     .buttons-channel-nav{
@@ -130,6 +130,7 @@ html{
         border-bottom:1px solid var(--branco);
         color: var(--branco);
     }
+
 
     .video-main{
         display: grid;
@@ -166,20 +167,12 @@ html{
         .video-statistics-main{
         grid-area: video-statistics-main;
         display: flex;
+        gap: 1em;
         color: var(--cinza);
-        font-size: 0.6rem;
-        padding: 2px 0px 0px 5px;
+        font-size: 0.8em;
+        padding-left:5px;
     }
 
-    .views{
-        grid-area: views;
-        padding-left: .5em;
-    }
-
-    .upload-time{
-        grid-area:upload-time;
-        padding-left: .5em;
-    }
 
     .video-options-main{
         background-color: transparent;
@@ -189,46 +182,43 @@ html{
 
     .playlist-1{
         padding-bottom: 30px;
+
     }
 
     .playlist-title{
         color: var(--branco);
+        font-size: 1.2em;
         padding: 10px 0px 10px 10px;
     }
 
     .video{
         display: grid;
-        grid-template-columns: 40% 60%;
+        grid-template-columns: 45% 55%;
         grid-template-areas: 
         "thumbnail-common   video-info";
-        height: thu;
+        padding: 0px 10px 10px 10px;
+        gap: 10px;
     }
     
     .channel-name-video, .views, .upload-time{
         color: var(--cinza);
     }
 
-   
-
     .thumbnail-common{
         grid-area: thumbnail-common;
         width: 100%;
         border-radius: 10%;
+        padding: 0px ;
     }
 
     .video-info{
         grid-area: video-info;
-        display: grid;
-        grid-template-columns: 1fr 1fr 16px;
-        grid-template-areas: 
-        "video-title    video-title     video-options"
-        "channel-name-video   channel-name-video    ."
-        "views          upload-time     .";
     }
 
     .video-title{
         grid-area: video-title;
         color: var(--branco);
+        font-size: 1em;
         font-weight: lighter;
     }
 
@@ -237,14 +227,30 @@ html{
         background-color: transparent;
         border: none;
         color: var(--branco);
+        padding-right: .5rem;
+    }
+
+    .video-title-and-options{
+        display: flex;
+        justify-content:space-between;
+        align-items: start;
     }
 
     .channel-name-video{
         grid-area: channel-name-video;
+        font-size: 0.8em;
     }
-    
 
+    .video-statistics{
+        grid-area: video-statistics;
+        display: flex;
+        gap: 1em;
+        font-size: 0.8em;
+    }
 
+    .playlist-2{
+        padding-bottom: 58px;
+    }
 
     .nav{
         background-color: var(--preto);
@@ -252,9 +258,8 @@ html{
         justify-content: space-around;
         align-items: center;
         height:max-content;
-        border-top: 10px var(--cinza);
         padding: 10px 0px 10px 0px;
-        border-top: 0.1px solid var(--cinza);
+        border-top: 1px solid var(--cinza);
         position:fixed;
         bottom: 0;
         left: 0;
@@ -272,4 +277,41 @@ html{
         font-size: 2rem;
     }
 
+    .pc{
+    display: none;
+}
 
+/* Para PC */
+    
+@media (min-width: 1024px){
+    .phone{
+        display: none;
+    }
+
+    .pc{
+        display: block;
+    }
+
+    header{
+        display: flex;
+    }
+
+    .search-bar{
+        border: 1px solid var(--cinza);
+    }
+
+    .search-search-bar{
+        color: var(--branco);
+    }
+
+    .videos-playlist{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .video{
+        display: flex;
+        flex-direction: column;
+    }
+}

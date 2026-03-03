@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>coisa</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <button class="go-back button-header"><i class="bi bi-chevron-left"></i></button>
-        <h2 class="channel-name-header button-header">Kaka - Mestre Pokémon!</h2>
-        <button class="cast-tv button-header"><i class="bi bi-cast"></i></button>
-        <button class="search button-header"><i class="bi bi-search"></i></button>
-        <button class="options-header button-header"><i class="bi bi-three-dots-vertical"></i></button>
+        <button class="go-back button-header phone"><i class="bi bi-chevron-left"></i></button>
+        <h2 class="channel-name-header button-header phone">Kaka - Mestre Pokémon!</h2>
+        <button class="cast-tv button-header phone"><i class="bi bi-cast"></i></button>
+        <button class="menu pc"><i class="bi bi-list"></i></button>
+        <div class="search-bar pc">
+            <input type="text" name="search-bar">
+            <button class="search-search-bar"><i class="bi bi-search"></i></button>
+        </div>
+        <button class="search button-header phone"><i class="bi bi-search"></i></button>
+        <button class="options-header button-header phone"><i class="bi bi-three-dots-vertical"></i></button>
     </header>
     <main>
         <div class="channel-container">
@@ -22,8 +27,8 @@
                 <img src="/imgs/channel-icon.jpg" alt="ícone do canal" class="channel-icon-main"></img>
                 <h1 class="channel-name-main">Kaka - Mestre Pokémon!</h1>
                 <p class="channel-description">Eu gosto de Pokémon, acho que da pra perceber. Canal feito pra falar sobre Pokémon, fazer nerdologias, analise de personagem e reviews e retrospectivas dos jogos! roteiros, capas de vídeo e direção de video, todas feitas por João Marcello M. Gomes</p>
+                <button class="subscribe">Subscribe</button>
             </div>
-            <button class="subscribe">Subscribe</button>
             <nav class="channel-nav">
                 <button class="home buttons-channel-nav">HOME</button>
                 <button class="videos buttons-channel-nav">VIDEOS</button>
@@ -39,8 +44,8 @@
                         <h3 class="video-title-main">TUDO que você PRECISA SABER sobre Pokémon</h3>
                         <button class="bi bi-three-dots-vertical video-options-main"></button>
                         <div class="video-statistics-main">
-                            <div class="channel-name-video">Kaka - Mestre Pokémon! •</div>
-                            <div class="views">352K views •</div>
+                            <div class="channel-name-video-main">Kaka - Mestre Pokémon!</div>
+                            <div class="views">352K views</div>
                             <div class="upload-time">2 years ago</div>
                         </div>
                     </div>
@@ -51,22 +56,72 @@
                         <div class="videos-playlist">
                             <div class="video">
                                 <img src="imgs/thumbnails/hop.jpg" alt="thumbnail" class="thumbnail-common">
-                                <div class="video-info">
+                                <div class="video-info"> <div class="video-title-and-options">
+
                                     <h3 class="video-title">Como a DEPRESSÃO faz do Hop o MELHOR Rival de Pokémon</h3>
-                                    <div class="channel-name-video">Kaka - Mestre Pokémon!</div>
-                                    <div class="views">214K views •</div>
-                                    <div class="upload-time">3 years ago</div>
                                     <button class="bi bi-three-dots-vertical video-options"></button>                                
+                                </div>
+                                    <div class="channel-name-video">Kaka - Mestre Pokémon!</div>
+                                    <div class="video-statistics">   
+                                        <div class="views">214K views</div>
+                                        <div class="upload-time">3 years ago</div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="video">
                                 <img src="imgs/thumbnails/leon.jpg" alt="thumbnail" class="thumbnail-common">
-                                <div class="video-info">
+                                <div class="video-info"> <div class="video-title-and-options">
+
                                     <h3 class="video-title">O Leon representa VOCÊ!</h3>
-                                    <div class="channel-name-video">Kaka - Mestre Pokémon!</div>
-                                    <div class="views">143K views •</div>
-                                    <div class="upload-time">3 years ago</div>
                                     <button class="bi bi-three-dots-vertical video-options"></button>                                
+                                </div>
+                                    <div class="channel-name-video">Kaka - Mestre Pokémon!</div>
+                                    <div class="video-statistics">   
+                                        <div class="views">143K views</div>
+                                        <div class="upload-time">3 years ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video">
+                                <img src="imgs/thumbnails/red-pontos.jpg" alt="thumbnail" class="thumbnail-common">
+                                <div class="video-info"> <div class="video-title-and-options">
+
+                                    <h3 class="video-title">...</h3>
+                                    <button class="bi bi-three-dots-vertical video-options"></button>                                
+                                </div>
+                                    <div class="channel-name-video">Kaka - Mestre Pokémon!</div>
+                                    <div class="video-statistics">   
+                                        <div class="views">338K views</div>
+                                        <div class="upload-time">3 years ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video">
+                                <img src="imgs/thumbnails/a-tragica-historia-de-n.jpg" alt="thumbnail" class="thumbnail-common">
+                                <div class="video-info"> <div class="video-title-and-options">
+
+                                    <h3 class="video-title">A TRÁGICA História de N</h3>
+                                    <button class="bi bi-three-dots-vertical video-options"></button>                                
+                                </div>
+                                    <div class="channel-name-video">Kaka - Mestre Pokémon!</div>
+                                    <div class="video-statistics">   
+                                        <div class="views">191K views</div>
+                                        <div class="upload-time">3 years ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video pc">
+                                <img src="imgs/thumbnails/guzma.jpg" alt="thumbnail" class="thumbnail-common">
+                                <div class="video-info"> <div class="video-title-and-options">
+
+                                    <h3 class="video-title">GUZMA e o peso de FALHAR!</h3>
+                                    <button class="bi bi-three-dots-vertical video-options"></button>                                
+                                </div>
+                                    <div class="channel-name-video">Kaka - Mestre Pokémon!</div>
+                                    <div class="video-statistics">   
+                                        <div class="views">191K views</div>
+                                        <div class="upload-time">3 years ago</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -74,25 +129,73 @@
                     <div class="playlist-2">
                         <h2 class="playlist-title">PokéMitologia</h2>
                         <div class="videos-playlist">
-
                             <div class="video">
                                 <img src="imgs/thumbnails/arceus.jpg" alt="thumbnail" class="thumbnail-common">
-                                <div class="video-info">
+                                <div class="video-info"> <div class="video-title-and-options">
+
                                     <h3 class="video-title">A verdadeira origem de Arceus e o mundo Pokémon - #PokéMitologia</h3>
-                                    <div class="channel-name-video">Kaka - Mestre Pokémon!</div>
-                                    <div class="views">180K views •</div>
-                                    <div class="upload-time">4 years ago</div>
                                     <button class="bi bi-three-dots-vertical video-options"></button>                                
+                                </div>
+                                    <div class="channel-name-video">Kaka - Mestre Pokémon!</div>
+                                    <div class="video-statistics">   
+                                        <div class="views">180K views</div>
+                                        <div class="upload-time">4 years ago</div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="video">
                                 <img src="imgs/thumbnails/trio-criacao.jpg" alt="thumbnail" class="thumbnail-common">
-                                <div class="video-info">
+                                <div class="video-info"> <div class="video-title-and-options">
+
                                     <h3 class="video-title">A VERDADEIRA ORIGEM do Trio da Criação! - #PokéMitologia</h3>
-                                    <div class="channel-name-video">Kaka - Mestre Pokémon!</div>
-                                    <div class="views">121K views •</div>
-                                    <div class="upload-time">4 years ago</div>
                                     <button class="bi bi-three-dots-vertical video-options"></button>                                
+                                </div>
+                                    <div class="channel-name-video">Kaka - Mestre Pokémon!</div>
+                                    <div class="video-statistics">   
+                                        <div class="views">121K views</div>
+                                        <div class="upload-time">4 years ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video">
+                                <img src="imgs/thumbnails/verdade-necrozma.jpg" alt="thumbnail" class="thumbnail-common">
+                                <div class="video-info"> <div class="video-title-and-options">
+
+                                    <h3 class="video-title">A TRISTE verdade sobre Necrozma - #PokéMitologia</h3>
+                                    <button class="bi bi-three-dots-vertical video-options"></button>                                
+                                </div>
+                                    <div class="channel-name-video">Kaka - Mestre Pokémon!</div>
+                                    <div class="video-statistics">   
+                                        <div class="views">180K views</div>
+                                        <div class="upload-time">4 years ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video">
+                                <img src="imgs/thumbnails/origens-trio-titans.jpg" alt="thumbnail" class="thumbnail-common">
+                                <div class="video-info"> <div class="video-title-and-options">
+                                    <h3 class="video-title">As VERDADEIRAS ORIGENS do Trio Titans do Planeta! - #PokéMitologia</h3>
+                                    <button class="bi bi-three-dots-vertical video-options"></button>                                
+                                </div>
+                                    <div class="channel-name-video">Kaka - Mestre Pokémon!</div>
+                                    <div class="video-statistics">   
+                                        <div class="views">180K views</div>
+                                        <div class="upload-time">4 years ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video pc">
+                                <img src="imgs/thumbnails/ultimo-trio.jpg" alt="thumbnail" class="thumbnail-common">
+                                <div class="video-info"> <div class="video-title-and-options">
+
+                                    <h3 class="video-title">Os ULTIMOS Lendários de Arceus - #PokéMitologia</h3>
+                                    <button class="bi bi-three-dots-vertical video-options"></button>                                
+                                </div>
+                                    <div class="channel-name-video">Kaka - Mestre Pokémon!</div>
+                                    <div class="video-statistics">   
+                                        <div class="views">191K views</div>
+                                        <div class="upload-time">3 years ago</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -104,7 +207,7 @@
         <nav class="nav">
                 <button class="home button-bottom-nav"><i class="bi bi-house-door-fill"></i></button>
                 <button class="shorts button-bottom-nav"><i class="bi bi-file-play"></i></i></button>
-                <button class="create button-bottom-nav"><i class="bi bi-plus-circle"></i></button>
+                <button class="create phone button-bottom-nav"><i class="bi bi-plus-circle"></i></button>
                 <button class="subscriptions button-bottom-nav"><i class="bi bi-collection-play"></i></button>
                 <button class="library button-bottom-nav"><i class="bi bi-collection"></i></button>
             </nav>
