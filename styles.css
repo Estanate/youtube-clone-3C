@@ -2,6 +2,7 @@
     --preto:#0F0F0F;
     --branco:#F1F1F1;
     --cinza:#AAAAAA;
+    --cinza-escuro:#2A2A2A;
     font-family: sans-serif;
 }
 
@@ -14,8 +15,6 @@ html{
     margin: 0;
     padding: 0;
 }
-
-
 
     header{
         display: flex;
@@ -58,19 +57,18 @@ html{
         grid-column: 9 / 10;
     }
 
-  .channel-container{
-        height: 50vh;
+  .channel-main{
         background-color: var(--preto);
         display: grid;
         grid-template-areas: 
-        "channel-cover"
+        "channel-cover-mobile"
         "channel-summary"
         "subscribe"
         "channel-nav";
     }
 
-    .channel-cover{
-        grid-area:channel-cover;
+    .channel-cover-mobile{
+        grid-area:channel-cover-mobile;
         width: 100%;
         height: 100%;
     }
@@ -80,8 +78,8 @@ html{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
     }
+
 
     .channel-icon-main{
         margin-top: 10px;
@@ -121,6 +119,7 @@ html{
     }
 
     .buttons-channel-nav{
+    padding: 20px 0px 20px 0px;
     border: none;
     background-color: transparent;
     color: var(--cinza);
@@ -252,7 +251,7 @@ html{
         padding-bottom: 58px;
     }
 
-    .nav{
+    .nav-mobile{
         background-color: var(--preto);
         display: flex;
         justify-content: space-around;
@@ -293,15 +292,135 @@ html{
     }
 
     header{
+        grid-area: header;
+        display: grid;
+        grid-template-columns: 3em repeat(8, 1fr);
+        grid-template-areas: 
+        "menu logo-yt . search-tool search-tool search-tool search-tool . user-stuff";
+        justify-content: center;
+    }
+    header button{
+        color: var(--branco);
+        background-color: transparent;
+        border:none;
+    }
+
+    .menu{
+        grid-area: menu;
+        background-color: transparent;
+        border: none;
+        color: var(--branco);
+        font-size: 1.5em;
+    }
+
+    .logo-yt{
+        grid-area: logo-yt;
+        height: 1.3em;
+        margin-left: 15px;
+    }
+
+    .search-tool{
+        grid-area: search-tool;
         display: flex;
+        justify-content: center;
     }
 
     .search-bar{
-        border: 1px solid var(--cinza);
+        border: 1px solid var(--cinza-escuro);
+        display: flex;
+        justify-content: center;
+        border-radius:15px;
+        width: 100%;
+        margin-right: 15px;
     }
 
-    .search-search-bar{
+    .input-search-bar{
+        width: 100%;
+        background-color: black;
+        border:none;
+        border-radius:15px 0px 0px 15px;
+    }
+
+    .lupa-search-bar{
         color: var(--branco);
+        background-color: var(--cinza-escuro);
+        border-radius:0px 15px 15px 0px;
+        padding: 5px 20px 5px 20px;
+    }
+
+    .mic-search{
+        grid-area: mic-search;
+        background-color: var(--cinza-escuro);
+        border-radius: 50%;
+        width: 2.5em;
+    }
+
+    .user-stuff{
+        grid-area:user-stuff;
+        display: flex;
+        justify-content: space-around;
+    }
+    .user-stuff img{
+        border-radius: 50%;
+        height: 1.9em;
+    }
+
+    .nav-desktop{
+        grid-area: nav-desktop;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px;
+    }
+    .nav-desktop h5{
+        font-size: 0.25em;
+        margin: 0px;
+    }
+
+    .top-section{
+        display: grid;
+        grid-template-columns: 5% 95%;
+        grid-template-areas: 
+        "nav-desktop channel-cover";
+    }
+
+    .channel-cover-desktop{
+        grid-area: channel-cover;
+        width: 100%;
+    }
+
+    .channel-main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .channel-container{
+        padding: 1% 15% 5% 15%;
+    }
+
+    .channel-summary{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    .channel-info{
+       justify-self: flex-start; 
+    }
+    
+    .subscribers{
+        color: var(--cinza);
+    }
+
+    .subscribe{
+        width: auto;
+        margin: 0;
+    }
+
+    .channel-nav{
+        justify-content: space-between;
     }
 
     .videos-playlist{
