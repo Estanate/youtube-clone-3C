@@ -16,6 +16,11 @@ html{
     padding: 0;
 }
 
+.fundo-preto{
+    background-color: var(--preto);
+    border: var(--branco) solid 1px;
+}
+
     header{
         display: flex;
         flex-direction: row;
