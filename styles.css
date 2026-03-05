@@ -80,17 +80,22 @@ html{
         align-items: center;
     }
 
-
     .channel-icon-main{
         margin-top: 10px;
         width: 4.5em;
         border-radius: 50%;
     }
 
+    .channel-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     .channel-name-main{
         color: var(--branco);
-        font-size: 1.5rem;
-        padding-top: 5px;
+        font-size: 1.4rem;
     }
 
     .channel-description{
@@ -168,7 +173,7 @@ html{
         display: flex;
         gap: 1em;
         color: var(--cinza);
-        font-size: 0.8em;
+        font-size: 0.65em;
         padding-left:5px;
     }
 
@@ -373,8 +378,15 @@ html{
         padding: 15px;
     }
     .nav-desktop h5{
-        font-size: 0.25em;
+        font-size: 0.3em;
+        font-weight: lighter;
         margin: 0px;
+    }
+
+    .button-bottom-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .top-section{
@@ -399,15 +411,13 @@ html{
     }
 
     .channel-summary{
-        display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
     }
 
-
-    .channel-info{
-       justify-self: flex-start; 
+    .channel-name-main{
+        padding: 0px;
     }
     
     .subscribers{
@@ -421,6 +431,16 @@ html{
 
     .channel-nav{
         justify-content: space-between;
+        align-items: center;
+    }
+
+    .buttons-channel-nav{
+        padding: 50px 30px 15px;
+    }
+
+    .home{
+        border-bottom:2px solid var(--branco);
+        color: var(--branco);
     }
 
     .videos-playlist{
