@@ -211,7 +211,7 @@ html{
     .thumbnail-common{
         grid-area: thumbnail-common;
         width: 100%;
-        border-radius: 10%;
+        border-radius: 20px;
         padding: 0px ;
     }
 
@@ -295,6 +295,7 @@ html{
     .pc{
         display: block;
     }
+
 
     header{
         grid-area: header;
@@ -407,6 +408,7 @@ html{
     }
 
     .channel-container{
+        display: grid;
         padding: 1% 15% 5% 15%;
     }
 
@@ -416,17 +418,29 @@ html{
         justify-content: space-between;
     }
 
+    .channel-info{
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .channel-icon-main{
+        width: 7em;
+        margin: 0;
+    }
+
     .channel-name-main{
         padding: 0px;
     }
     
     .subscribers{
         color: var(--cinza);
+        font-size: .7em;
     }
 
     .subscribe{
         width: auto;
-        margin: 0;
+        padding: 10px 20px;
+        margin: 0 25px 0 0;
     }
 
     .channel-nav{
@@ -435,7 +449,11 @@ html{
     }
 
     .buttons-channel-nav{
-        padding: 50px 30px 15px;
+        padding: 0px 30px 15px;
+        margin-top: 50px;
+    }
+    .buttons-channel-nav:hover{
+        border-bottom:2px solid var(--cinza);
     }
 
     .home{
@@ -443,14 +461,98 @@ html{
         color: var(--branco);
     }
 
-    .videos-playlist{
+    .video-area-desktop{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "video-main video-main video-main video-main video-main video-main"
+        "playlist-1 playlist-1 playlist-1 playlist-1 playlist-1 playlist-1 "
+        "playlist-2 playlist-2 playlist-2 playlist-2 playlist-2 playlist-2"
+        ;
+        padding-top: 30px;
+    }
+
+    .video-main{
+        grid-area: video-main;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-areas: 
+        "thumbnail-main video-info-main video-info-main . .";
+    }
+
+    .thumbnail-main{
+        grid-area: thumbnail-main;
+        border-radius: 20px;
+    }
+
+    .video-info-main{
+        display: flex;
+        grid-area: video-info-main;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0px 0px 0px 10px;
+    }
+
+    .video-title-main{
+        padding: 0;
+    }
+
+
+    .video-description-main{
+        color: var(--branco);
+        font-size: 0.7em;
+    }
+    .video-description-main a{
+        color: #58a6ff;
+    }
+
+    .playlist-name{
         display: flex;
         align-items: center;
-        justify-content: space-between;
+    }
+    .playlist-name button{
+        display: inherit;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        color: var(--cinza);
+        margin-left: 20px;
+        justify-content: center;
+        height: 2em;
+        width: 5.5em;
+    }
+    .playlist-name button{
+        border-radius: 15px;
+    }
+    .playlist-name button:hover{
+        background-color: var(--cinza-escuro);
+    }
+
+    .playlist-name i{
+        font-size: 1.5em;
+    }
+
+    .playlist-1{
+        grid-area: playlist-1;
+        display: grid;
+
+        padding-top: 30px;
+    }
+    
+    .playlist-2{
+        grid-area: playlist-2;
+        padding: 0;
+    }
+
+    .videos-playlist{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
     }
 
     .video{
         display: flex;
         flex-direction: column;
+        padding: 0;
     }
 }
