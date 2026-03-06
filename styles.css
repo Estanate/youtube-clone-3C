@@ -16,10 +16,6 @@ html{
     padding: 0;
 }
 
-.fundo-preto{
-    background-color: var(--preto);
-    border: var(--branco) solid 1px;
-}
 
     header{
         display: flex;
@@ -111,15 +107,23 @@ html{
     }
 
     .subscribe{
+        --color-subscribe:var(--branco);
+        --color-text:var(--preto);
+        display: flex;
+        justify-content: center;
+        gap: 1em;
         width: 90%;
         height: 4   0px;
         grid-area:subscribe;
         border: none;
         border-radius: 50px;
         font-weight: bold;
-        color: var(--preto);
+        background-color: var(--color-subscribe);
+        color: var(--color-text);
         margin-top:20px;
         padding:5px;
+        cursor: pointer;
+        transition-duration: .6s;
     }
 
     .channel-nav{
