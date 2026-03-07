@@ -58,6 +58,18 @@ html{
         grid-column: 9 / 10;
     }
 
+    .options-header{
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    }
+    .options-header button{
+        background-color: transparent;
+        border: none;
+        color: var(--branco);
+    }
+
+
   .channel-main{
         background-color: var(--preto);
         display: grid;

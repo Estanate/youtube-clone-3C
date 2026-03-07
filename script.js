@@ -1,5 +1,7 @@
 const subscribe = document.getElementById('subscribe');
-const optionsHeader = document.getElementById('options-header')
+const optionsHeader = document.getElementById('options-header');
+const optBtn = document.getElementById('options-header-button');
+const opt = document.getElementById('options-header');
 
 
 let subscribed = JSON.parse(localStorage.getItem('subscribed')) ?? false;
@@ -31,6 +33,15 @@ function subscribedButtonClicked(){
     localStorage.setItem('subscribed', JSON.stringify(subscribed));
 }
 
+function toggleMenu(){
+    if(opt.style.display === 'flex'){
+        opt.style.display = 'none'
+    }
+    else{
+        opt.style.display = 'flex'
+    }
+}
+
 
 function InitializePage(){
     subscribedButtonRender();
@@ -39,3 +50,4 @@ function InitializePage(){
 InitializePage();
 
 subscribe.addEventListener('click', subscribedButtonClicked);
+optBtn.addEventListener('click', toggleMenu)
