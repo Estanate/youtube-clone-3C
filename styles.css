@@ -26,6 +26,8 @@ html{
         padding: 10px 0px 10px 0px;
         display: grid;
         grid-template-columns: repeat(9, 1fr);
+        grid-template-areas: 
+        "go-back    channel-name-header    channel-name-header   channel-name-header    .   .    cast-tv   search  options-header-button";
     }
 
     .button-header{
@@ -35,53 +37,41 @@ html{
     }
 
     .go-back{
-        grid-column: 1 / 2;
+        grid-area: go-back;
         font-size: 1.4rem;
         font-weight: lighter;
     }
 
     .channel-name-header{
-        grid-column: 2 / 6;
+        grid-area: channel-name-header;
         font-size: 1em;
         color: var(--branco);
     }
 
     .cast-tv{
-        grid-column: 7 / 8;
+        grid-area: cast-tv;
     }
 
     .search{
-        grid-column: 8 / 9;
+        grid-area: search;
     }
 
     .options-header-button{
-        grid-column: 9 / 10;
-    }
-
-    .fundocinza{
-        position: fixed;
-        z-index: 1;
-        display: none;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: var(--preto);
-        opacity: 0.5;
+        grid-area: options-header-button;
     }
 
     .options-header{
-        z-index: 2;
+        z-index: 1;
         display: none;
         background-color: #0F0F0F;
         flex-direction: column;
-        align-items: start;
+        align-items: center;
         justify-content: space-around;
         position:fixed;
         bottom: 0;
         left: 0;
         height: 30%;
         width: 100%;
-        padding: 10%;
     }
     .options-header button{
         background-color: transparent;
@@ -344,7 +334,7 @@ html{
         display: grid;
         grid-template-columns: 3em repeat(8, 1fr);
         grid-template-areas: 
-        "menu-button logo-yt . search-tool search-tool search-tool search-tool . user-stuff";
+        "menu logo-yt . search-tool search-tool search-tool search-tool . user-stuff";
         justify-content: center;
     }
     header button{
@@ -353,8 +343,8 @@ html{
         border:none;
     }
 
-    .menu-button{
-        grid-area: menu-button;
+    .menu{
+        grid-area: menu;
         background-color: transparent;
         border: none;
         color: var(--branco);
@@ -480,7 +470,7 @@ html{
     }
 
     .subscribe{
-        width: 166px;
+        width: auto;
         padding: 10px 20px;
         margin: 0 25px 0 0;
     }
