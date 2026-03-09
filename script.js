@@ -2,6 +2,7 @@ const subscribe = document.getElementById('subscribe');
 const optionsHeader = document.getElementById('options-header');
 const optBtn = document.getElementById('options-header-button');
 const opt = document.getElementById('options-header');
+const fundoCinza = document.getElementById('fundocinza');
 
 
 let subscribed = JSON.parse(localStorage.getItem('subscribed')) ?? false;
@@ -36,9 +37,11 @@ function subscribedButtonClicked(){
 function toggleMenu(){
     if(opt.style.display === 'flex'){
         opt.style.display = 'none'
+        fundoCinza.style.display = 'none'
     }
     else{
         opt.style.display = 'flex'
+        fundoCinza.style.display = 'block'
     }
 }
 
@@ -51,3 +54,4 @@ InitializePage();
 
 subscribe.addEventListener('click', subscribedButtonClicked);
 optBtn.addEventListener('click', toggleMenu)
+fundoCinza.addEventListener('click', toggleMenu)

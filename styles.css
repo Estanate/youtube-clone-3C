@@ -58,18 +58,30 @@ html{
         grid-column: 9 / 10;
     }
 
-    .options-header{
+    .fundocinza{
+        position: fixed;
         z-index: 1;
+        display: none;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: var(--preto);
+        opacity: 0.5;
+    }
+
+    .options-header{
+        z-index: 2;
         display: none;
         background-color: #0F0F0F;
         flex-direction: column;
-        align-items: center;
+        align-items: start;
         justify-content: space-around;
         position:fixed;
         bottom: 0;
         left: 0;
         height: 30%;
         width: 100%;
+        padding: 10%;
     }
     .options-header button{
         background-color: transparent;
@@ -332,7 +344,7 @@ html{
         display: grid;
         grid-template-columns: 3em repeat(8, 1fr);
         grid-template-areas: 
-        "menu logo-yt . search-tool search-tool search-tool search-tool . user-stuff";
+        "menu-button logo-yt . search-tool search-tool search-tool search-tool . user-stuff";
         justify-content: center;
     }
     header button{
@@ -341,8 +353,8 @@ html{
         border:none;
     }
 
-    .menu{
-        grid-area: menu;
+    .menu-button{
+        grid-area: menu-button;
         background-color: transparent;
         border: none;
         color: var(--branco);
@@ -468,7 +480,7 @@ html{
     }
 
     .subscribe{
-        width: auto;
+        width: 166px;
         padding: 10px 20px;
         margin: 0 25px 0 0;
     }
