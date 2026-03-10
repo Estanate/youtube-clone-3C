@@ -3,6 +3,8 @@ const optionsHeader = document.getElementById('options-header');
 const optBtn = document.getElementById('options-header-button');
 const opt = document.getElementById('options-header');
 const fundoCinza = document.getElementById('fundocinza');
+const menuBtn = document.getElementById('menu-button')
+const barraLateral = document.getElementById('nav-extended');
 
 
 let subscribed = JSON.parse(localStorage.getItem('subscribed')) ?? false;
@@ -45,6 +47,15 @@ function toggleMenu(){
     }
 }
 
+function toggleSideBar(){
+
+    if(barraLateral.style.display === 'flex'){
+        barraLateral.style.display = 'none'
+    }
+    else{
+        barraLateral.style.display = 'flex'
+    }
+}
 
 function InitializePage(){
     subscribedButtonRender();
@@ -55,3 +66,4 @@ InitializePage();
 subscribe.addEventListener('click', subscribedButtonClicked);
 optBtn.addEventListener('click', toggleMenu)
 fundoCinza.addEventListener('click', toggleMenu)
+menuBtn.addEventListener('click', toggleSideBar)

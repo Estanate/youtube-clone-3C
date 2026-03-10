@@ -22,7 +22,7 @@ html{
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
-        background-color: var(--preto);
+        background-color: #181818;
         padding: 10px 0px 10px 0px;
         display: grid;
         grid-template-columns: repeat(9, 1fr);
@@ -363,6 +363,8 @@ html{
 
 
     header{
+        position: sticky;
+        top: 0;
         grid-area: header;
         display: grid;
         grid-template-columns: 3em repeat(8, 1fr);
@@ -449,30 +451,89 @@ html{
         margin: 0px;
     }
 
+    @keyframes showSideBar {
+        from{
+            transform: translatex(-15vh);
+        }
+
+        to{
+            transform: translateY(0px);
+        }
+    }
+
     .nav-extended{
-        z-index: 2;
+        z-index: 1;
         position: fixed;
-        display: flex;
+        display: none;
+        height: 100%;
         flex-direction: column;
         align-items: self-start;
         background-color: var(--preto);
-        color: var(--branco);
+        color: var(--cinza);
         width: 15vw;
+        padding: 20px;
+        gap: 20px;
         button{
             background-color: transparent;
             color: var(--branco);
             border: none;
-            font-size: 1.1em;
         }
+        span, button{
+            font-size: 1.2em;
+        }
+
+        animation: showSideBar 0.5s;
+    }
+
+    .home-nav, .shorts-nav, .subscriptions-nav, .you-nav{
+        display: flex;
+        gap:10px;
+        font-size: 1.2em;
+        color: var(--branco);
+        font-weight: bold;
+        align-items: center;
+        i{
+            font-size: 1.5em;
+        }
+    }
+    
+    .subscriptions-nav{
+        padding-bottom: 15px;
+    }
+
+    .subscriptions-nav-extended{
+        display: inherit;
+        flex-direction: column;
+        padding: 15px 0px 20px 0px;
+        border-top: 2px solid var(--cinza-escuro);
+        border-bottom: 2px solid var(--cinza-escuro);
+    }
+
+    .subscribed-channels{
+        display: flex;
+        flex-direction: inherit;
+        gap: 10px;
+        align-items: flex-start;
     }
 
     .channel{
         display: flex;
-        font-size: 1.2em;
+        align-items: center;
+        gap:10px;
         img{
-        width: 2em;
-        height: 2em;
-        border-radius: 50%;
+            width: 2.5em;
+            border-radius: 50%;
+        }
+    }
+
+    .show-more{
+        display: flex;
+        align-items: center;
+        padding-left: 5px;
+        gap: 15px;
+        color: var(--cinza);
+        span{
+        font-size: 1em;
         }
     }
 
@@ -480,6 +541,15 @@ html{
         display: flex;
         flex-direction: column;
         align-items: self-start;
+        gap: 10px;
+        button{
+            display: inherit;
+            gap: 10px;
+            color: var(--cinza);
+        }
+        i{
+            font-size: 1.5em;
+        }
     }
 
     .top-section button{
