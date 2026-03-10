@@ -60,24 +60,57 @@ html{
         grid-area: options-header-button;
     }
 
+    @keyframes showOptions {
+        from{
+            transform: translateY(40vh);
+        }
+
+        to{
+            transform: translateY(0px);
+        }
+    }
+
     .options-header{
-        z-index: 1;
+        z-index: 2;
         display: none;
-        background-color: #0F0F0F;
+        background-color: var(--cinza-escuro);
+        border-radius: 10px;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-around;
         position:fixed;
         bottom: 0;
-        left: 0;
-        height: 30%;
-        width: 100%;
-    }
-    .options-header button{
+        margin: 10px;
+        height: 30vh;
+        width: 89.5vw;
+        padding: 10px;
+
+        animation: showOptions 0.5s;
+
+        i{
+            margin-right: 15px;
+            font-size: 1.2em;
+        }
+
+        button{
         background-color: transparent;
         border: none;
         color: var(--branco);
         font-weight: bold;
+        font-size: 1em;
+        display: flex;
+        align-items: center;
+        }
+    }
+    .fundocinza{
+        position: fixed;
+        z-index: 1;
+        display: none;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: var(--preto);
+        opacity: 0.5;
     }
 
 
@@ -319,7 +352,7 @@ html{
 
 /* Para PC */
     
-@media (min-width: 1024px){
+@media (min-width: 1024px) {
     .phone{
         display: none;
     }
@@ -343,7 +376,7 @@ html{
         border:none;
     }
 
-    .menu{
+    .menu-button{
         grid-area: menu;
         background-color: transparent;
         border: none;
@@ -416,10 +449,47 @@ html{
         margin: 0px;
     }
 
-    .button-bottom-nav{
+    .nav-extended{
+        z-index: 2;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+        background-color: var(--preto);
+        color: var(--branco);
+        width: 15vw;
+        button{
+            background-color: transparent;
+            color: var(--branco);
+            border: none;
+            font-size: 1.1em;
+        }
+    }
+
+    .channel{
+        display: flex;
+        font-size: 1.2em;
+        img{
+        width: 2em;
+        height: 2em;
+        border-radius: 50%;
+        }
+    }
+
+    .you-nav-extended{
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+    }
+
+    .top-section button{
         display: flex;
         flex-direction: column;
         align-items: center;
+        color: var(--branco);
+        border:none;
+        background-color: transparent;
+        font-size: 1.5rem;
     }
 
     .top-section{
