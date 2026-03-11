@@ -363,8 +363,6 @@ html{
 
 
     header{
-        position: sticky;
-        top: 0;
         grid-area: header;
         display: grid;
         grid-template-columns: 3em repeat(8, 1fr);
@@ -463,9 +461,8 @@ html{
 
     .nav-extended{
         z-index: 1;
-        position: fixed;
+        position: absolute;
         display: none;
-        height: 100%;
         flex-direction: column;
         align-items: self-start;
         background-color: var(--preto);
@@ -478,25 +475,10 @@ html{
             color: var(--branco);
             border: none;
         }
-        span, button{
-            font-size: 1.2em;
-        }
+    
 
         animation: showSideBar 0.5s;
     }
-
-    .home-nav, .shorts-nav, .subscriptions-nav, .you-nav{
-        display: flex;
-        gap:10px;
-        font-size: 1.2em;
-        color: var(--branco);
-        font-weight: bold;
-        align-items: center;
-        i{
-            font-size: 1.5em;
-        }
-    }
-    
     .subscriptions-nav{
         padding-bottom: 15px;
     }
@@ -504,6 +486,7 @@ html{
     .subscriptions-nav-extended{
         display: inherit;
         flex-direction: column;
+        align-items: flex-start;
         padding: 15px 0px 20px 0px;
         border-top: 2px solid var(--cinza-escuro);
         border-bottom: 2px solid var(--cinza-escuro);
